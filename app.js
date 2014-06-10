@@ -22,4 +22,5 @@ function *list() {
 }
 
 var port = Number(process.env.PORT || 3000);
+console.log('starting app on port ' + port);
 if (!module.parent) app.listen(port);
