@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Buffer Rendered Grid</title>
+    <link rel="stylesheet" type="text/css" href="http://dev.sencha.com/extjs/5.0.0/examples/shared/example.css" />
+    <script type="text/javascript" src="http://dev.sencha.com/extjs/5.0.0/examples/shared/include-ext.js"></script>
+    <script type="text/javascript" src="buffer-grid.js"></script>
+</head>
+<body>
+    <h1>Buffer Rendered Grid Bug</h1>
+    <p>Ext JS's grid supports buffered rendering, which enables you to load large numbers of records into a grid without paging.</p>
+    <p>However, it uses a real div that gets scrolled and that div has a maximum allowable height restriction imposed by the browser, which means that the scroll bar will only scroll to the last pixel of the maximum height, not the last row coming from the store</p>
+
+    <p>In the following example, if you drag the scroll bar to the bottom, you should see the 10,000,000th row, but instead you will see only a million or so rows depending on your browser.</p>
+</body>
+</html>
+
