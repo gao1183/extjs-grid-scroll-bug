@@ -1,7 +1,9 @@
 {
   "name": "grid_bug",
   "version": "0.0.0",
-  "engines" : { "node" : ">=0.11.12 <0.12" },
+  "engines": {
+    "node": ">=0.11.12 <0.12"
+  },
   "description": "",
   "main": "app.js",
   "scripts": {
@@ -12,6 +14,7 @@
   "dependencies": {
     "koa": "~0.7.0",
     "koa-route": "~1.1.4",
-    "koa-static": "~1.4.5"
+    "koa-static": "~1.4.5",
+    "bluebird": "~2.3.11"
   }
 }
