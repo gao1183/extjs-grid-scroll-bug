@@ -36,7 +36,7 @@ Ext.onReady(function() {
     var grid = Ext.create('Ext.grid.Panel', {
         width: 300,
         height: 500,
-        title: 'Buffered Grid of 10,000,000 rows',
+        title: 'Buffered Grid of 1,000 rows',
         store: store,
         loadMask: true,
         selModel: {

@@ -2,7 +2,7 @@ var koa = require('koa')
 , route = require('koa-route')
 , app = module.exports = koa()
 , serve = require('koa-static')
-, total = 10000000;
+, total = 1000;
 
 app.use(serve('.'));
 app.use(route.get('/list', list));  
@@ -16,6 +16,12 @@ function *list() {
       if (row < total) {
         results.push({row:row});
       }
+  }
+
+  var stop = new Date().getTime();
+  var delay = 3000; //miliseconds
+  while(new Date().getTime() < stop + delay) {
+      ;
   }
   var res = yield { results: results, success: true, total: total} ;
   this.body = res;

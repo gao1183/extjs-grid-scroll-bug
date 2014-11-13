@@ -10,11 +10,10 @@
     <script type="text/javascript" src="buffer-grid.js"></script>
 </head>
 <body>
-    <h1>Buffer Rendered Grid Bug</h1>
-    <p>Ext JS's grid supports buffered rendering, which enables you to load large numbers of records into a grid without paging.</p>
-    <p>However, it uses a real div that gets scrolled and that div has a maximum allowable height restriction imposed by the browser, which means that the scroll bar will only scroll to the last pixel of the maximum height, not the last row coming from the store</p>
+    <h1>Buffer Rendered Grid Scrolling Bug</h1>
+    <p>Ext JS's grid goes blank when scrolling with opposite direction. The bug is easy to reproduce if the request to load the data takes more than 1 second</p>
 
-    <p>In the following example, if you drag the scroll bar to the bottom, you should see the 10,000,000th row, but instead you will see only a million or so rows depending on your browser.</p>
+    <p>In the following example, if you drag the scroll bar to the bottom, hold it until you see the loading mask, and drag it back to the top, the grid will go blank after it finishes loading</p>
 </body>
 </html>
 
